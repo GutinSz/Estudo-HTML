@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Medidor de internet </h1>
+    Velocidade da net: <input type="number" name="Vel" id="Vel"> MBS/S
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+
+    <Script>
+        function calcular() {
+            var Vel = window.document.querySelector("input#Vel")
+            var res = window.document.querySelector("div#res")
+            var vel = Number(Vel.value)
+            res.innerHTML = `<p> Sua velocidade de internet é de ${vel} </p>`
+
+            if (vel < 50) {
+                res.innerHTML = `<p> Roda a manivela aí</p>`
+            } else if (vel < 300) {
+                res.innerHTML = `<p> Da pra melhorar</p>`
+            } else { 
+                res.innerHTML = `<p> Tá boa pa porra irmão</p>`
+            }
+        }
+    </Script>
+    
+</body>
+</html>

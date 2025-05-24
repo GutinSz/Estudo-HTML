@@ -1,0 +1,49 @@
+body {
+  background: linear-gradient(135deg, #ffe6f0, #ffccdd);
+  font: 25px 'Source Code Pro', monospace;
+  color: #8a145d;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+h1{
+  font: 50px 'Source Code Pro', monospace;
+  font-weight: 700;
+  color: #c2185b;
+}
+
+button {
+  background-color: #f48fb1;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ec407a;
+}
+
+/* Inputs estilosos */
+input, textarea {
+  border: 2px solid #f48fb1;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  width: 250px;
+}
+
+/* Container opcional para centralizar o conteúdo */
+.container {
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  display: inline-block;
+}

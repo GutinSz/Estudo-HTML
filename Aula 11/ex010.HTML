@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Estrangeiro ou Nativo</p>
+    Você é de que país? <input type="text" id="p2">
+    <input type="button" value="Verificar" onclick="eounao()">
+    <div id="res"></div>
+    
+    <script>
+        function eounao() {
+            var pais = document.getElementById("p2").value.trim();
+            var res = document.getElementById("res");
+           
+            if (pais !== "Brasil") {
+                res.innerHTML = "Você é estrangeiro"
+            } else {
+                res.innerHTML = "Tu faz parte do Bostil"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

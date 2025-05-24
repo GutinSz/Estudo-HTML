@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Fatorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Calculadora de Fatorial</h2>
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero" />
+    <button onclick="calcularFatorial()">Calcular</button>
+    <p id="resultado"></p>
+  </div>
+
+  <script>
+    function fatorial(n) {
+      if (n < 0) return "Fatorial não existe para número negativo.";
+      let produto = 1;
+      while (n > 1) {
+        produto *= n;
+        n--;
+      }
+      return produto;
+    }
+
+    function calcularFatorial() {
+      const input = document.getElementById("numero");
+      const resultado = document.getElementById("resultado");
+
+      const numero = Number(input.value);
+      if (isNaN(numero)) {
+        resultado.textContent = "Por favor, digite um número válido.";
+        return;
+      }
+
+      const f = fatorial(numero);
+      resultado.textContent = `O fatorial de ${numero} é ${f}`;
+    }
+  </script>
+</body>
+</html>
